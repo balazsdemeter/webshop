@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="3240be65-7726-4392-a912-01028db71f7e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalog/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalog/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalog/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalog/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalog/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalog/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalog/src/main/java/hu/webuni/catalog/CatalogApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalog/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalog/src/test/java/hu/webuni/catalog/catalog/CatalogeApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/src/main/java/hu/webuni/config/config/ConfigApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/src/main/resources/config/catalog.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/src/main/resources/config/discovery.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/src/main/resources/config/gateway.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/src/main/resources/config/order.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/src/main/resources/config/user.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/src/test/java/hu/webuni/config/config/ConfigApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/discovery/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/discovery/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/discovery/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/discovery/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/discovery/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/discovery/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/discovery/src/main/java/hu/webuni/discovery/discovery/DiscoveryApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/discovery/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/discovery/src/test/java/hu/webuni/discovery/discovery/DiscoveryApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway/src/main/java/hu/webuni/gateway/gateway/GatewayApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway/src/test/java/hu/webuni/gateway/gateway/GatewayApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order/src/main/java/hu/webuni/order/order/OrderApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order/src/test/java/hu/webuni/order/order/OrderApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shipping/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shipping/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shipping/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shipping/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shipping/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shipping/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shipping/src/main/java/hu/webuni/shipping/shipping/ShippingApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shipping/src/main/java/hu/webuni/shipping/shipping/config/WebServiceConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shipping/src/main/java/hu/webuni/shipping/shipping/model/ShipmentRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shipping/src/main/java/hu/webuni/shipping/shipping/model/ShipmentResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shipping/src/main/java/hu/webuni/shipping/shipping/service/ShippingService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shipping/src/main/java/hu/webuni/shipping/shipping/xmlws/ShippingServiceXmlWs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shipping/src/main/java/hu/webuni/shipping/shipping/xmlws/ShippingServiceXmlWsImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shipping/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shipping/src/test/java/hu/webuni/shipping/shipping/ShippingApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/hu/webuni/user/user/UserApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/test/java/hu/webuni/user/user/UserApplicationTests.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$/shipping-service">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 5
+}]]></component>
+  <component name="ProjectId" id="2tJKDGrV61cWeRbyqZ07rEBSpSj" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "jdk.selected.JAVA_MODULE": "17",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="hu.webuni.catalog" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.ShippingApplication">
+    <configuration name="CatalogApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="catalog" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="hu.webuni.catalog.CatalogApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ConfigApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="config" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="hu.webuni.config.config.ConfigApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DiscoveryApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="discovery" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="hu.webuni.discovery.discovery.DiscoveryApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="gateway" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="hu.webuni.gateway.gateway.GatewayApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OrderApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="order" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="hu.webuni.order.order.OrderApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ShippingApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="shipping" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="hu.webuni.shipping.shipping.ShippingApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="user" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="hu.webuni.user.user.UserApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3240be65-7726-4392-a912-01028db71f7e" name="Changes" comment="" />
+      <created>1740064615694</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1740064615694</updated>
+      <workItem from="1740064616919" duration="4128000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+</project>
