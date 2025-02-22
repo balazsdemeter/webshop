@@ -1,0 +1,11 @@
+create sequence address_seq start with 1 increment by 50;
+create sequence chart_item_seq start with 1 increment by 50;
+create sequence shop_order_seq start with 1 increment by 50;
+create sequence product_seq start with 1 increment by 50;
+create table address (zip_code integer, id bigint not null, city varchar(255), house_number varchar(255), street varchar(255), primary key (id));
+create table chart_item (amount integer not null, id bigint not null, order_id bigint, product_id bigint, primary key (id));
+create table shop_order (address_id bigint, id bigint not null, shipment_id bigint, name varchar(255), status varchar(255) check (status in ('PENDING','CONFIRMED','DECLINED','SHIPMENT_FAILED','DELIVERED')), primary key (id));
+create table product (price integer not null, id bigint not null, name varchar(255), primary key (id));
+alter table if exists chart_item add constraint FKgsilrybyxqhatdo537k58h2pq foreign key (order_id) references shop_order;
+alter table if exists chart_item add constraint FKbf2iw96cddynj4tuu9wsd4g8l foreign key (product_id) references product;
+alter table if exists orders add constraint FKf5464gxwc32ongdvka2rtvw96 foreign key (address_id) references address;

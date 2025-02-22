@@ -8,7 +8,7 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: currency
+        - id: user
           uri: lb://user
           predicates:
             - Path=/user/**
@@ -20,9 +20,9 @@ spring:
             - Path=/order/**
           filters:
             - RewritePath=/order(?<segment>/?.*), /api$\{segment}
-        - id: cataloge
-          uri: lb://order
+        - id: catalog
+          uri: lb://catalog
           predicates:
-            - Path=/order/**
+            - Path=/catalog/**
           filters:
-            - RewritePath=/order(?<segment>/?.*), /api$\{segment}
+            - RewritePath=/catalog(?<segment>/?.*), /api$\{segment}

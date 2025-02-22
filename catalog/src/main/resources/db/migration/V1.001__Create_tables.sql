@@ -1,0 +1,11 @@
+create sequence category_seq start with 1 increment by 50;
+create sequence product_seq start with 1 increment by 50;
+create sequence revinfo_seq start with 1 increment by 50;
+create table category (id bigint not null, name varchar(255), primary key (id));
+create table category_aud (rev integer not null, revtype smallint, id bigint not null, name varchar(255), primary key (rev, id));
+create table product (price integer, category_id bigint, id bigint not null, name varchar(255), primary key (id));
+create table product_aud (price integer, rev integer not null, revtype smallint, category_id bigint, id bigint not null, name varchar(255), primary key (rev, id));
+create table revinfo (rev integer not null, revtstmp bigint, primary key (rev));
+alter table if exists category_aud add constraint FKc9m640crhsib2ws80um6xuk1w foreign key (rev) references revinfo;
+alter table if exists product add constraint FK1mtsbur82frn64de7balymq9s foreign key (category_id) references category;
+alter table if exists product_aud add constraint FK9vwllld6jlw5xys1ay911oh1x foreign key (rev) references revinfo;

@@ -40,6 +40,15 @@
             <artifactId>cxf-spring-boot-starter-jaxws</artifactId>
             <version>4.0.2</version>
         </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-artemis</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.activemq</groupId>
+            <artifactId>artemis-jakarta-server</artifactId>
+        </dependency>
     </dependencies>
 
     <build>

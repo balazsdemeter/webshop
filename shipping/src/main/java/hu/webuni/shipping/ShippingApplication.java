@@ -1,15 +1,13 @@
-package hu.webuni.catalog;
+package hu.webuni.shipping;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cache.annotation.EnableCaching;
 
 @SpringBootApplication
-@EnableCaching
-public class CatalogApplication {
+public class ShippingApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(CatalogApplication.class, args);
+        SpringApplication.run(ShippingApplication.class, args);
     }
 
 }

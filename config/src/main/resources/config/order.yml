@@ -4,3 +4,9 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8082/eureka/
+
+spring:
+  datasource:
+            url: jdbc:postgresql://localhost:5432/order
+            username: postgres
+            password: postgres

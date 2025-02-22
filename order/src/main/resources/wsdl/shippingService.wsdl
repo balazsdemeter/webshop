@@ -1,0 +1,74 @@
+<wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://xmlws.shipping.webuni.hu/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" name="ShippingServiceXmlWsImplService" targetNamespace="http://xmlws.shipping.webuni.hu/">
+    <wsdl:types>
+        <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://xmlws.shipping.webuni.hu/" elementFormDefault="unqualified" targetNamespace="http://xmlws.shipping.webuni.hu/" version="1.0">
+            <xs:element name="orderShipment" type="tns:orderShipment"/>
+            <xs:element name="orderShipmentResponse" type="tns:orderShipmentResponse"/>
+            <xs:complexType name="orderShipment">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="arg0" type="tns:shipmentRequest"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="shipmentRequest">
+                <xs:sequence>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="items" nillable="true" type="tns:item"/>
+                    <xs:element minOccurs="0" name="shipFrom" type="tns:address"/>
+                    <xs:element minOccurs="0" name="shipTo" type="tns:address"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="item">
+                <xs:sequence>
+                    <xs:element name="amount" type="xs:int"/>
+                    <xs:element minOccurs="0" name="name" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="address">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="city" type="xs:string"/>
+                    <xs:element minOccurs="0" name="houseNumber" type="xs:string"/>
+                    <xs:element name="id" type="xs:long"/>
+                    <xs:element minOccurs="0" name="street" type="xs:string"/>
+                    <xs:element minOccurs="0" name="zipCode" type="xs:int"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="orderShipmentResponse">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="return" type="tns:shipmentResponse"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="shipmentResponse">
+                <xs:sequence>
+                    <xs:element name="shipmentId" type="xs:long"/>
+                </xs:sequence>
+            </xs:complexType>
+        </xs:schema>
+    </wsdl:types>
+    <wsdl:message name="orderShipment">
+        <wsdl:part element="tns:orderShipment" name="parameters"> </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="orderShipmentResponse">
+        <wsdl:part element="tns:orderShipmentResponse" name="parameters"> </wsdl:part>
+    </wsdl:message>
+    <wsdl:portType name="ShippingServiceXmlWs">
+        <wsdl:operation name="orderShipment">
+            <wsdl:input message="tns:orderShipment" name="orderShipment"> </wsdl:input>
+            <wsdl:output message="tns:orderShipmentResponse" name="orderShipmentResponse"> </wsdl:output>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="ShippingServiceXmlWsImplServiceSoapBinding" type="tns:ShippingServiceXmlWs">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="orderShipment">
+            <soap:operation soapAction="" style="document"/>
+            <wsdl:input name="orderShipment">
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="orderShipmentResponse">
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="ShippingServiceXmlWsImplService">
+        <wsdl:port binding="tns:ShippingServiceXmlWsImplServiceSoapBinding" name="ShippingServiceXmlWsImplPort">
+            <soap:address location="http://localhost:8080/services/shippingService"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>

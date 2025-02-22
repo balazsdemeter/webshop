@@ -1,6 +1,32 @@
 server:
   port: 8084
+
 eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8082/eureka/
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/catalog
+    username: postgres
+    password: postgres
+  jpa:
+    properties:
+      hibernate:
+        cache:
+          region:
+            factory_class: infinispan
+          infinispan:
+            cfg: org/infinispan/hibernate/cache/commons/builder/infinispan-configs-local.xml
+            entity:
+              expiration:
+                max_idle: 30000
+          use_second_level_cache: true
+      jakarta:
+        persistence:
+          sharedCache:
+            mode: ENABLE_SELECTIVE
+  cache:
+    infinispan:
+      config: classpath:infinispan.xml
