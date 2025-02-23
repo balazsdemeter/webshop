@@ -1,0 +1,25 @@
+server:
+  port: 8086
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8082/eureka/
+
+hu:
+  webuni:
+    tokenlib:
+      keypaths:
+        private: /Users/balaz/Cubix/tokens/private.pem
+        public: /Users/balaz/Cubix/tokens/public.pem
+
+facebook:
+  graph:
+    api:
+      base:
+        url: https://graph.facebook.com/v13.0
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/user
+    username: postgres
+    password: postgres

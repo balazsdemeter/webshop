@@ -6,6 +6,12 @@ eureka:
     serviceUrl:
       defaultZone: http://localhost:8082/eureka/
 
+hu:
+  webuni:
+    tokenlib:
+      keypaths:
+        public: /Users/balaz/Cubix/tokens/public.pem
+
 spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/catalog

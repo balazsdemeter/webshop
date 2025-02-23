@@ -1,0 +1,1 @@
+alter table shop_order add column username varchar(255);

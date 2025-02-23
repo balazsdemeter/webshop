@@ -6,6 +6,7 @@ import com.querydsl.core.types.dsl.BooleanExpression;
 import com.querydsl.core.types.dsl.PathBuilderFactory;
 import com.querydsl.jpa.JPQLQuery;
 import com.querydsl.jpa.impl.JPAQuery;
+import hu.webuni.catalog.api.model.CategoryDto;
 import hu.webuni.catalog.api.model.ProductDto;
 import hu.webuni.catalog.mapper.ProductMapper;
 import hu.webuni.catalog.model.Category;
@@ -44,8 +45,11 @@ public class ProductService {
     @Transactional
     public ProductDto create(ProductDto productDto) {
         Product product = productMapper.dtoToProduct(productDto);
-        Category category = categoryService.findById(productDto.getCategory().getId());
-        product.setCategory(category);
+        CategoryDto categoryDto = productDto.getCategory();
+        if (categoryDto != null) {
+            Category category = categoryService.findById(categoryDto.getId());
+            product.setCategory(category);
+        }
 
         productRepository.save(product);
         return productMapper.productToDto(product);

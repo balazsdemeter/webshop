@@ -10,6 +10,6 @@ import java.util.List;
 
 public interface ChartItemRepository extends JpaRepository<ChartItem, Long> {
     @EntityGraph(attributePaths = {"product"})
-    @Query("SELECT c from ChartItem c where c.order = :order")
-    List<ChartItem> findChartItemByOrderWithProduct(ShopOrder order);
+    @Query("SELECT c from ChartItem c where c.order in :orders")
+    List<ChartItem> findChartItemByOrderWithProduct(List<ShopOrder> orders);
 }

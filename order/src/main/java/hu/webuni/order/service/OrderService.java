@@ -11,11 +11,14 @@ import hu.webuni.order.repository.ShopOrderRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.jms.annotation.JmsListener;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.User;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.server.ResponseStatusException;
 
 import java.util.Collections;
+import java.util.List;
 
 @Service
 @RequiredArgsConstructor
@@ -32,22 +35,35 @@ public class OrderService {
             chartItem.setOrder(order);
             chartItem.getProduct().setChart(Collections.singletonList(chartItem));
         }
+        order.setUsername(getUser().getUsername());
         order.setStatus(OrderStatus.PENDING);
         order = orderRepository.save(order);
         return orderMapper.shopOrderToDto(order);
     }
 
     @Transactional
-    public OrderDto findByName(String name) {
-        ShopOrder order = orderRepository.findOrderByNameWithAddress(name).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
-        order = orderRepository.findOrderByIdWithChart(order.getId());
-        chartItemRepository.findChartItemByOrderWithProduct(order);
-        return orderMapper.shopOrderToDto(order);
+    public List<OrderDto> findByUsername(String username) {
+        User user = getUser();
+        boolean notAdmin = user.getAuthorities().stream().noneMatch(grantedAuthority -> grantedAuthority.getAuthority().equals("admin"));
+        if (!username.equals(user.getUsername()) && notAdmin) {
+            throw new ResponseStatusException(HttpStatus.UNAUTHORIZED);
+        }
+        List<ShopOrder> orders = orderRepository.findOrderByNameWithAddress(username);
+        if (orders.isEmpty()) {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND);
+        }
+
+        orders = orderRepository.findOrderByIdsWithChart(orders.stream().map(ShopOrder::getId).toList());
+        chartItemRepository.findChartItemByOrderWithProduct(orders);
+        return orderMapper.shopOrdersToDtos(orders);
     }
 
     @Transactional
     public Long confirmedOrDeclined(Long id, OrderStatus status) {
         ShopOrder order = orderRepository.findById(id).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
+
+        validateUser(order.getUsername());
+
         order.setStatus(status);
         Long shipmentId = null;
         if (OrderStatus.CONFIRMED == status) {
@@ -64,5 +80,17 @@ public class OrderService {
             order.setStatus(OrderStatus.valueOf(message.getStatus()));
             orderRepository.save(order);
         });
+    }
+
+    private void validateUser(String username) {
+        User user = getUser();
+        boolean notAdmin = user.getAuthorities().stream().noneMatch(grantedAuthority -> grantedAuthority.getAuthority().equals("admin"));
+        if (!username.equals(user.getUsername()) && notAdmin) {
+            throw new ResponseStatusException(HttpStatus.UNAUTHORIZED);
+        }
+    }
+
+    private User getUser() {
+        return (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
     }
 }

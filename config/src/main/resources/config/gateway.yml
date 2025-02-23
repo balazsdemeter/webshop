@@ -4,16 +4,17 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8082/eureka/
+
+hu:
+  webuni:
+    tokenlib:
+      keypaths:
+        public: /Users/balaz/Cubix/tokens/public.pem
+
 spring:
   cloud:
     gateway:
       routes:
-        - id: user
-          uri: lb://user
-          predicates:
-            - Path=/user/**
-          filters:
-            - RewritePath=/user(?<segment>/?.*), /api$\{segment}
         - id: order
           uri: lb://order
           predicates:
@@ -26,3 +27,9 @@ spring:
             - Path=/catalog/**
           filters:
             - RewritePath=/catalog(?<segment>/?.*), /api$\{segment}
+        - id: user-service
+          uri: lb://user-service
+          predicates:
+            - Path=/users/**
+          filters:
+            - RewritePath=/users(?<segment>/?.*), /api$\{segment}

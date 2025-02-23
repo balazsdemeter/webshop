@@ -6,6 +6,7 @@ import hu.webuni.order.model.ChartItem;
 import hu.webuni.order.model.ShopOrder;
 import hu.webuni.order.model.Product;
 import hu.webuni.order.repository.ShopOrderRepository;
+import hu.webuni.tokenlib.tokenlib.JwtService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -15,7 +16,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-@SpringBootApplication
+@SpringBootApplication(scanBasePackageClasses = {JwtService.class, OrderApplication.class})
 @RequiredArgsConstructor
 public class OrderApplication implements CommandLineRunner  {
     private final ShopOrderRepository orderRepository;

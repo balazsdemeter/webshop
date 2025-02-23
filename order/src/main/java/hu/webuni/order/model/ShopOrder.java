@@ -32,6 +32,8 @@ public class ShopOrder {
 
     private String name;
 
+    private String username;
+
     @OneToMany(mappedBy = "order", cascade = CascadeType.PERSIST)
     private List<ChartItem> chart;
 

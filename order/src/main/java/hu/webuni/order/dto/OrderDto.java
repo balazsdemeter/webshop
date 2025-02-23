@@ -1,5 +1,6 @@
 package hu.webuni.order.dto;
 
+import hu.webuni.order.enums.OrderStatus;
 import lombok.Data;
 
 import java.util.List;
@@ -11,4 +12,5 @@ public class OrderDto {
     private AddressDto address;
     private List<ChartItemDto> chart;
     private long shipmentId;
+    private OrderStatus status;
 }

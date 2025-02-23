@@ -15,9 +15,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
-// TODO: userName
 @RequiredArgsConstructor
 @RestController
 @RequestMapping("/api")
@@ -30,10 +30,9 @@ public class OrderController {
         return ResponseEntity.ok(registeredOrder);
     }
 
-    @GetMapping("/findByName")
-    public ResponseEntity<OrderDto> findByName(@RequestParam String name) {
-        OrderDto orderDto = service.findByName(name);
-        return ResponseEntity.ok(orderDto);
+    @GetMapping("/findByUsername")
+    public ResponseEntity<List<OrderDto>> findByUsername(@RequestParam String username) {
+        return ResponseEntity.ok(service.findByUsername(username));
     }
 
     @Async

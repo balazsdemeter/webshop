@@ -10,3 +10,9 @@ spring:
             url: jdbc:postgresql://localhost:5432/order
             username: postgres
             password: postgres
+
+hu:
+  webuni:
+    tokenlib:
+      keypaths:
+        public: /Users/balaz/Cubix/tokens/public.pem
