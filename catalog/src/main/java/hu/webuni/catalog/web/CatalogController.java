@@ -1,28 +1,23 @@
 package hu.webuni.catalog.web;
 
-import com.querydsl.core.types.Predicate;
 import hu.webuni.catalog.api.CatalogControllerApi;
 import hu.webuni.catalog.api.model.CategoryDto;
-import hu.webuni.catalog.api.model.HistoryDataProductDto;
+import hu.webuni.catalog.api.model.HistoryDataPriceDto;
 import hu.webuni.catalog.api.model.ProductDto;
-import hu.webuni.catalog.mapper.HistoryDataMapper;
-import hu.webuni.catalog.mapper.ProductMapper;
+import hu.webuni.catalog.mapper.HistoryDataPriceMapper;
 import hu.webuni.catalog.model.HistoryData;
 import hu.webuni.catalog.model.Product;
 import hu.webuni.catalog.service.CategoryService;
 import hu.webuni.catalog.service.ProductService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Pageable;
-import org.springframework.data.querydsl.binding.QuerydslPredicate;
 import org.springframework.data.web.SortDefault;
 import org.springframework.http.ResponseEntity;
-import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.context.request.NativeWebRequest;
 
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
 
 @RequiredArgsConstructor
 @RestController
@@ -33,8 +28,7 @@ public class CatalogController implements CatalogControllerApi {
 
     private final CategoryService categoryService;
     private final ProductService productService;
-    private final ProductMapper productMapper;
-    private final HistoryDataMapper historyDataMapper;
+    private final HistoryDataPriceMapper historyDataPriceMapper;
 
     public void configPageable(@SortDefault("id") Pageable pageable) {}
 
@@ -64,18 +58,10 @@ public class CatalogController implements CatalogControllerApi {
         return ResponseEntity.ok().build();
     }
 
-    @Transactional
     @Override
-    public ResponseEntity<List<HistoryDataProductDto>> getHistory(Long id) {
+    public ResponseEntity<List<HistoryDataPriceDto>> getPriceHistory(Long id) {
         List<HistoryData<Product>> products = productService.getHistory(id);
-        List<HistoryData<ProductDto>> courseDtos = products.stream().map(hd -> new HistoryData<>(
-                productMapper.productToDto(hd.getData()),
-                hd.getRevType(),
-                hd.getRevision(),
-                hd.getDate()
-        )).collect(Collectors.toList());
-
-        return ResponseEntity.ok(historyDataMapper.mapProductDtoList(courseDtos));
+        return ResponseEntity.ok(historyDataPriceMapper.map(products));
     }
 
     @Override

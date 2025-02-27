@@ -4,68 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3240be65-7726-4392-a912-01028db71f7e" name="Changes" comment="Shipping, Order, Catalog">
-      <change afterPath="$PROJECT_DIR$/catalog/src/main/java/hu/webuni/catalog/security/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/src/main/resources/config/user-service.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gateway/src/main/java/hu/webuni/gateway/gateway/security/JwtCheckFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gateway/src/main/java/hu/webuni/gateway/gateway/security/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order/src/main/java/hu/webuni/order/security/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order/src/main/resources/db/migration/V1.002__Alter_shop_order_table.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tokenlib/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tokenlib/src/main/java/hu/webuni/tokenlib/tokenlib/JwtAuthFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tokenlib/src/main/java/hu/webuni/tokenlib/tokenlib/JwtService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tokenlib/src/main/java/hu/webuni/tokenlib/tokenlib/PemUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tokenlib/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/.gitattributes" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/hu/webuni/user/dto/FacebookData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/hu/webuni/user/dto/LoginDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/hu/webuni/user/dto/RegisterDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/hu/webuni/user/model/ShopUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/hu/webuni/user/repository/ShopUserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/hu/webuni/user/sercurity/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/hu/webuni/user/sercurity/ShopUserDetailsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/hu/webuni/user/sercurity/ShopUserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/hu/webuni/user/service/FacebookLoginService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/hu/webuni/user/web/JwtLoginController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/resources/db/migration/V1.001__Create_table.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="3240be65-7726-4392-a912-01028db71f7e" name="Changes" comment="User-service + auth bekötés">
+      <change afterPath="$PROJECT_DIR$/.idea/webshop.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalog/src/main/java/hu/webuni/catalog/mapper/HistoryDataPriceMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/postman/webshop.postman_collection.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shipping/src/main/java/hu/webuni/shipping/service/StatusService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catalog/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/catalog/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catalog/src/main/java/hu/webuni/catalog/CatalogApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/catalog/src/main/java/hu/webuni/catalog/CatalogApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catalog/src/main/java/hu/webuni/catalog/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/catalog/src/main/java/hu/webuni/catalog/service/ProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catalog/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/catalog/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/src/main/resources/config/catalog.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/src/main/resources/config/catalog.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/src/main/resources/config/gateway.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/src/main/resources/config/gateway.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/src/main/resources/config/order.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/src/main/resources/config/order.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/src/main/resources/config/user.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/create.sql" beforeDir="false" afterPath="$PROJECT_DIR$/create.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/src/main/java/hu/webuni/gateway/gateway/GatewayApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/java/hu/webuni/gateway/gateway/GatewayApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/order/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order/src/main/java/hu/webuni/order/OrderApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/order/src/main/java/hu/webuni/order/OrderApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order/src/main/java/hu/webuni/order/dto/OrderDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/order/src/main/java/hu/webuni/order/dto/OrderDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order/src/main/java/hu/webuni/order/mapper/ShopOrderMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/order/src/main/java/hu/webuni/order/mapper/ShopOrderMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order/src/main/java/hu/webuni/order/model/ShopOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/order/src/main/java/hu/webuni/order/model/ShopOrder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order/src/main/java/hu/webuni/order/repository/ChartItemRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/order/src/main/java/hu/webuni/order/repository/ChartItemRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order/src/main/java/hu/webuni/order/repository/ShopOrderRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/order/src/main/java/hu/webuni/order/repository/ShopOrderRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order/src/main/java/hu/webuni/order/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/order/src/main/java/hu/webuni/order/service/OrderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/catalog/src/main/java/hu/webuni/catalog/mapper/HistoryDataMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/catalog/src/main/java/hu/webuni/catalog/web/CatalogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/catalog/src/main/java/hu/webuni/catalog/web/CatalogController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/catalog/src/main/openapi/openapi.yml" beforeDir="false" afterPath="$PROJECT_DIR$/catalog/src/main/openapi/openapi.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order/src/main/java/hu/webuni/order/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/order/src/main/java/hu/webuni/order/security/SecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/order/src/main/java/hu/webuni/order/web/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/order/src/main/java/hu/webuni/order/web/OrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/order/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/tokenlib/.gitattributes" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/tokenlib/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/tokenlib/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/mvnw" beforeDir="false" afterPath="$PROJECT_DIR$/tokenlib/mvnw" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/tokenlib/mvnw.cmd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/src/main/java/hu/webuni/user/user/UserApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/hu/webuni/user/UserApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/src/test/java/hu/webuni/user/user/UserApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/test/java/hu/webuni/user/user/UserApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shipping/src/main/java/hu/webuni/shipping/ShippingApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/shipping/src/main/java/hu/webuni/shipping/ShippingApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shipping/src/main/java/hu/webuni/shipping/service/ShippingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/shipping/src/main/java/hu/webuni/shipping/service/ShippingService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/hu/webuni/user/dto/RegisterDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/hu/webuni/user/dto/RegisterDto.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,15 +84,15 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "17",
-    "last_opened_file_path": "C:/Users/balaz/Cubix/webshop/order/src/main/resources/db/migration",
+    "last_opened_file_path": "C:/Users/balaz/Cubix/webshop",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
     "vue.rearranger.settings.migration": "true"
   }
@@ -157,6 +109,7 @@
       <recent name="C:\Users\balaz\Cubix\webshop\order\src\main\java\hu\webuni\order\dto" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\balaz\Cubix\webshop\" />
       <recent name="C:\Users\balaz\Cubix\webshop\catalog\src\main\resources\db\migration" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -243,6 +196,8 @@
       <workItem from="1740152714582" duration="14366000" />
       <workItem from="1740226455701" duration="22476000" />
       <workItem from="1740297866882" duration="26244000" />
+      <workItem from="1740329802469" duration="38000" />
+      <workItem from="1740651564229" duration="7518000" />
     </task>
     <task id="LOCAL-00001" summary="kiindulási modulok">
       <option name="closed" value="true" />
@@ -297,17 +252,9 @@
           <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/catalog/src/main/java/hu/webuni/catalog/service/ProductService.java</url>
-          <line>59</line>
-          <option name="timeStamp" value="35" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/catalog/src/main/java/hu/webuni/catalog/service/ProductService.java</url>
-          <line>73</line>
-          <properties>
-            <option name="lambda-ordinal" value="-1" />
-          </properties>
-          <option name="timeStamp" value="52" />
+          <url>file://$PROJECT_DIR$/tokenlib/src/main/java/hu/webuni/tokenlib/tokenlib/JwtAuthFilter.java</url>
+          <line>30</line>
+          <option name="timeStamp" value="54" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

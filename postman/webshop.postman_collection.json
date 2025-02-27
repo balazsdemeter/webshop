@@ -1,0 +1,306 @@
+{
+	"info": {
+		"_postman_id": "d73079c7-f04c-4241-82be-3a71b08d68b2",
+		"name": "webshop",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "24445946"
+	},
+	"item": [
+		{
+			"name": "order_findByUsername",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJFUzUxMiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkYmFsdSIsImF1dGgiOlsiY3VzdG9tZXIiXSwiZXhwIjoxNzQwMzI5MzAyLCJpc3MiOiJ3ZWJ1bmktdXNlci1zZXJ2aWNlIn0.ALjxQ1Hgt5UYJwTfCNuSkxPGZFuDH-zsigOj7dGP1NHx82XhAgG2fzivJ16fwOiczasPV37S2PQsr2Of17ucnA1eAKKQkYMV5tC87DcE5kZmRtpzmjOFKiYsRdG_CP__3Qph8lLIpNygi95jR78UQe8nmPM4awBVfjV5DSMo6SMo3R_i"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"demeter balazs\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8083/order/findByUsername?username=sdf",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"order",
+						"findByUsername"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "sdf"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "order_registerOrder",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJFUzUxMiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkYmFsdSIsImF1dGgiOlsiY3VzdG9tZXIiXSwiZXhwIjoxNzQwMzMwMDg2LCJpc3MiOiJ3ZWJ1bmktdXNlci1zZXJ2aWNlIn0.AbRAuipJY-2zVqZ8IcXgO-n7QCncPe29GPY7hiMLnHmvEMUbJF-k5K2QXVt0S-0nhYf9tW8-optI0kRzzI1TtIFLACy_95kuxFtx9X8i7Lxwa9pM4nzVcIqvDiH3lSCvOEiJCwOpdK_xOkRrwwAYiI3lYGVim91uY11OHdPZHLNW-3GQ"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": null,\r\n    \"name\": \"demeter erherh\",\r\n    \"address\": {\r\n        \"zipCode\": 2045,\r\n        \"city\": \"Budaörs\",\r\n        \"street\": \"valami valami utca\",\r\n        \"houseNumber\": \"45\"\r\n    },\r\n    \"chart\": [\r\n        {\r\n            \"product\": {\r\n                \"name\": \"sör\",\r\n                \"price\": 600\r\n            },\r\n            \"amount\": 25\r\n        },\r\n        {\r\n            \"product\": {\r\n                \"name\": \"bor\",\r\n                \"price\": 2000\r\n            },\r\n            \"amount\": 3\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8083/order"
+			},
+			"response": []
+		},
+		{
+			"name": "order_confirmedOrDeclined",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJFUzUxMiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkYmFsdSIsImF1dGgiOlsiY3VzdG9tZXIiXSwiZXhwIjoxNzQwNjY1NDYzLCJpc3MiOiJ3ZWJ1bmktdXNlci1zZXJ2aWNlIn0.AaSgGXrvYmi3tcFaX2wnL7FWrVfy7KpXoSOT-tDdulGNBT9AJS_B_ieZqB7n1H9_FgJgImojiZCCDPDwJhtcJnhSAalyaGaqr4MYI8n7vPdoX-5Y5pwDt3-l63VQz6jownepcjfmnK2b76AUZpjNNfDixl753UMO6FpBb0gVNQ3ccXQ5"
+					}
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"status\":\"CONFIRMED\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8083/order/202/confirmedOrDeclined?status=CONFIRMED",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"order",
+						"202",
+						"confirmedOrDeclined"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "CONFIRMED"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "catalog_createCategory",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJFUzUxMiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkYmFsdSIsImF1dGgiOlsiY3VzdG9tZXIiXSwiZXhwIjoxNzQwMzI2Njg0LCJpc3MiOiJ3ZWJ1bmktdXNlci1zZXJ2aWNlIn0.Ad8SH7dPLuyUW5dVUmIlBnR1Bd1wfZm3nZirqxzoiBkEe4uaH5xDSmNlFB61CuKFpmJNBZ6k29x-eD4TfdhdKkmBAYj1rskNsPP482UXakc5xN69wiWe5n-V52X688W_yvkUv1R9_yMVCP_JfHNj0Thf7Y5TWnggwhb-TnOcTrzBjJb8"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Elektronika\",\r\n    \"productList\": null\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8083/catalog/createCategory"
+			},
+			"response": []
+		},
+		{
+			"name": "catalog_createProduct",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJFUzUxMiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImF1dGgiOlsiYWRtaW4iLCJjdXN0b21lciJdLCJleHAiOjE3NDAzMjU3MzcsImlzcyI6IndlYnVuaS11c2VyLXNlcnZpY2UifQ.Ab8Yv_wALAEw0L3wGmYp599NwHNBHP6y6iLR74-HOO8POOaZehFhEa4LaYNitDJtTIJC4o8NsW84r4-NoTd1AKteAarMX2aDnBVTdyO51Fc27mkQV3AOGlAapYSkVe7o9-LhXR7iBmB9lotKeukCIuXXbq-kAIKHn8kKYbTrjwJ37eTL"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": null,\r\n    \"name\": \"Televízió\",\r\n    \"price\": \"150000\",\r\n    \"category\": null\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8083/catalog/createProduct"
+			},
+			"response": []
+		},
+		{
+			"name": "catalog_deleteProduct",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJFUzUxMiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImF1dGgiOlsiYWRtaW4iLCJjdXN0b21lciJdLCJleHAiOjE3NDAzMjc1MzEsImlzcyI6IndlYnVuaS11c2VyLXNlcnZpY2UifQ.AV2_nbAjfkK-Z045ufmG7fi4eUMQzDjErZ3dzCb-J0zROXPG74tqgZqP64c2CQu5pU_YOyrTveD-cnY4l5XClqD8ACg94UbdDoVq2wzgv8iD-ESue2kBpHilOi08-UCeK67pSzSe6-5fv9XN7dbJWRtBnACZTjoV8hhYYI3erdgY5EFZ"
+					}
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:8083/catalog/product/152"
+			},
+			"response": []
+		},
+		{
+			"name": "catalog_modifyProduct",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJFUzUxMiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImF1dGgiOlsiYWRtaW4iLCJjdXN0b21lciJdLCJleHAiOjE3NDAzMjI1NDgsImlzcyI6IndlYnVuaS11c2VyLXNlcnZpY2UifQ.ADTyfmcpavfMrWwBConARAoJjtavgTcBYWrxrp3y6-J9hlWpnyavZoC04Lj5VFuXMkeyTK5JGDDjDKcbMowk70qBAIErMylU0bQQZQQbLOJSveurj_he26NLsDo1Oes82EFtqwCb8hPtvxLBZ2UEt2Qd1omgP2wC3bT4ijWofGMhmyRe"
+					}
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 52,\r\n    \"name\": \"Kék sajt\",\r\n    \"price\": 2500,\r\n    \"category\": {\r\n        \"id\": 1,\r\n        \"name\": \"Tejtermék\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8083/catalog/modifyProduct/153"
+			},
+			"response": []
+		},
+		{
+			"name": "catalog_priceHistory",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8083/catalog/product/52/history/price"
+			},
+			"response": []
+		},
+		{
+			"name": "catalog_productSearch",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8083/catalog/product/search?minPrice=&maxPrice=&productName=&categoryName=&page=0&size=1000&sort=price",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"catalog",
+						"product",
+						"search"
+					],
+					"query": [
+						{
+							"key": "minPrice",
+							"value": ""
+						},
+						{
+							"key": "maxPrice",
+							"value": ""
+						},
+						{
+							"key": "productName",
+							"value": ""
+						},
+						{
+							"key": "categoryName",
+							"value": ""
+						},
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "1000"
+						},
+						{
+							"key": "sort",
+							"value": "price"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user_login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"dbalu\",\r\n    \"password\": \"dbalu\",\r\n    \"facebookToken\": null\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8083/users/login"
+			},
+			"response": []
+		},
+		{
+			"name": "user_register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"dbalu\",\r\n    \"email\": \"dbalu@gmail.com\",\r\n    \"password\": \"dbalu\",\r\n    \"facebookToken\": null\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8083/users/register"
+			},
+			"response": []
+		}
+	]
+}

@@ -35,9 +35,8 @@ public class OrderController {
         return ResponseEntity.ok(service.findByUsername(username));
     }
 
-    @Async
     @PutMapping("/{id}/confirmedOrDeclined")
-    public CompletableFuture<Long> confirmedOrDeclined(@PathVariable Long id, @RequestParam String status) {
-        return CompletableFuture.completedFuture(service.confirmedOrDeclined(id, OrderStatus.valueOf(status)));
+    public Long confirmedOrDeclined(@PathVariable Long id, @RequestParam String status) {
+        return service.confirmedOrDeclined(id, OrderStatus.valueOf(status));
     }
 }

@@ -119,11 +119,11 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/ProductDto'
-  /api/product/history/{id}:
+  /api/product/{id}/history/price:
     get:
       tags:
         - catalog-controller
-      operationId: getHistory
+      operationId: getPriceHistory
       parameters:
         - name: id
           in: path
@@ -139,7 +139,7 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/HistoryDataProductDto'
+                  $ref: '#/components/schemas/HistoryDataPriceDto'
   /api/product/{id}:
     delete:
       tags:
@@ -178,18 +178,10 @@ components:
           format: int32
         category:
           $ref: '#/components/schemas/CategoryDto'
-    HistoryDataProductDto:
+    HistoryDataPriceDto:
       type: object
       properties:
-        data:
-          $ref: '#/components/schemas/ProductDto'
-        revType:
-          type: string
-          enum:
-            - ADD
-            - MOD
-            - DEL
-        revision:
+        price:
           type: integer
           format: int32
         date:
