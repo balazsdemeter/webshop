@@ -4,20 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3240be65-7726-4392-a912-01028db71f7e" name="Changes" comment="User-service + auth bekötés">
-      <change afterPath="$PROJECT_DIR$/.idea/webshop.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalog/src/main/java/hu/webuni/catalog/mapper/HistoryDataPriceMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/postman/webshop.postman_collection.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shipping/src/main/java/hu/webuni/shipping/service/StatusService.java" afterDir="false" />
+    <list default="true" id="3240be65-7726-4392-a912-01028db71f7e" name="Changes" comment="After tests">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catalog/src/main/java/hu/webuni/catalog/mapper/HistoryDataMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/catalog/src/main/java/hu/webuni/catalog/web/CatalogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/catalog/src/main/java/hu/webuni/catalog/web/CatalogController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catalog/src/main/openapi/openapi.yml" beforeDir="false" afterPath="$PROJECT_DIR$/catalog/src/main/openapi/openapi.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order/src/main/java/hu/webuni/order/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/order/src/main/java/hu/webuni/order/security/SecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/order/src/main/java/hu/webuni/order/web/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/order/src/main/java/hu/webuni/order/web/OrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shipping/src/main/java/hu/webuni/shipping/ShippingApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/shipping/src/main/java/hu/webuni/shipping/ShippingApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shipping/src/main/java/hu/webuni/shipping/service/ShippingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/shipping/src/main/java/hu/webuni/shipping/service/ShippingService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/hu/webuni/user/dto/RegisterDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/hu/webuni/user/dto/RegisterDto.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,30 +62,30 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "jdk.selected.JAVA_MODULE": "17",
-    "last_opened_file_path": "C:/Users/balaz/Cubix/webshop",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/balaz/Cubix/webshop&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
@@ -197,7 +186,8 @@
       <workItem from="1740226455701" duration="22476000" />
       <workItem from="1740297866882" duration="26244000" />
       <workItem from="1740329802469" duration="38000" />
-      <workItem from="1740651564229" duration="7518000" />
+      <workItem from="1740651564229" duration="8059000" />
+      <workItem from="1740928513415" duration="1096000" />
     </task>
     <task id="LOCAL-00001" summary="kiindulási modulok">
       <option name="closed" value="true" />
@@ -215,7 +205,15 @@
       <option name="project" value="LOCAL" />
       <updated>1740249222037</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="After tests">
+      <option name="closed" value="true" />
+      <created>1740664757618</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1740664757618</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -236,7 +234,8 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="kiindulási modulok" />
     <MESSAGE value="Shipping, Order, Catalog" />
-    <option name="LAST_COMMIT_MESSAGE" value="Shipping, Order, Catalog" />
+    <MESSAGE value="After tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="After tests" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -255,6 +254,38 @@
           <url>file://$PROJECT_DIR$/tokenlib/src/main/java/hu/webuni/tokenlib/tokenlib/JwtAuthFilter.java</url>
           <line>30</line>
           <option name="timeStamp" value="54" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/order/src/main/java/hu/webuni/order/service/OrderService.java</url>
+          <line>45</line>
+          <option name="timeStamp" value="55" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/catalog/src/main/java/hu/webuni/catalog/web/CatalogController.java</url>
+          <line>51</line>
+          <option name="timeStamp" value="56" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/catalog/src/main/java/hu/webuni/catalog/service/ProductService.java</url>
+          <line>59</line>
+          <option name="timeStamp" value="57" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/catalog/src/main/java/hu/webuni/catalog/service/ProductService.java</url>
+          <line>73</line>
+          <properties>
+            <option name="lambda-ordinal" value="-1" />
+          </properties>
+          <option name="timeStamp" value="58" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/order/src/main/java/hu/webuni/order/web/OrderController.java</url>
+          <line>35</line>
+          <properties class="hu.webuni.order.web.OrderController" method="findByUsername">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="59" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

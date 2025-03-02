@@ -43,11 +43,6 @@ public class OrderService {
 
     @Transactional
     public List<OrderDto> findByUsername(String username) {
-        User user = getUser();
-        boolean notAdmin = user.getAuthorities().stream().noneMatch(grantedAuthority -> grantedAuthority.getAuthority().equals("admin"));
-        if (!username.equals(user.getUsername()) && notAdmin) {
-            throw new ResponseStatusException(HttpStatus.UNAUTHORIZED);
-        }
         List<ShopOrder> orders = orderRepository.findOrderByNameWithAddress(username);
         if (orders.isEmpty()) {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND);
@@ -61,8 +56,6 @@ public class OrderService {
     @Transactional
     public Long confirmedOrDeclined(Long id, OrderStatus status) {
         ShopOrder order = orderRepository.findById(id).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
-
-        validateUser(order.getUsername());
 
         order.setStatus(status);
         Long shipmentId = null;
@@ -80,14 +73,6 @@ public class OrderService {
             order.setStatus(OrderStatus.valueOf(message.getStatus()));
             orderRepository.save(order);
         });
-    }
-
-    private void validateUser(String username) {
-        User user = getUser();
-        boolean notAdmin = user.getAuthorities().stream().noneMatch(grantedAuthority -> grantedAuthority.getAuthority().equals("admin"));
-        if (!username.equals(user.getUsername()) && notAdmin) {
-            throw new ResponseStatusException(HttpStatus.UNAUTHORIZED);
-        }
     }
 
     private User getUser() {
